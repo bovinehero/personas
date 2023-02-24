@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h2>{{ page_title }}</h2>
+    <p>
+        I need some text here
+    </p>
+
+    {% for persona in company %}
+
+        <div class="row featurette">
+
+            {% if loop.index % 2 != 0 %}
+
+                <div class="col-md-7">
+                    <h3><a href="/persona/{{ persona.url }}">{{ loop.index }}. {{ persona.name }}</a></h3>
+                    <p>{{ persona.description }}</p>
+                </div>
+                <div class="col-md-5">
+                    <img src="{{ persona.image_source }}" alt="" class="featurette-image image-responsive">
+                </div>
+            
+            {% else %}
+
+                <div class="col-md-5">
+                    <img src="{{ persona.image_source }}" alt="" class="featurette-image image-responsive">
+                </div>
+                <div class="col-md-7">
+                    <h3><a href="/persona/{{ persona.url }}">{{ loop.index }}. {{ persona.name }}</a></h3>
+                    <p>{{ persona.description }}</p>
+                </div>
+
+            {% endif %}
+
+        </div>
+
+        {% if loop.index != loop.length %}
+
+            <hr class="featurette-divider">
+
+        {% endif %}
+
+    {% endfor %}
+
+{% endblock %}
