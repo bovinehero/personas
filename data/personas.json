@@ -1,0 +1,113 @@
+[
+    {
+      "name": "Customer Support",
+      "bio": "First level of support, cares mostly about solving customer problems, always happy to help, cares about customer satisfaction",
+      "image_source": "https://www.pngitem.com/pimgs/m/506-5067022_sweet-shap-profile-placeholder-hd-png-download.png",
+      "tech" : "30",
+      "business" : "50",
+      "customer" : "90",
+      "social" : "80",
+      "availability" : "30",
+      "url": "support",
+      "goals" : [
+        "goal 1",
+        "goal 2",
+        "goal 3"
+      ],
+      "frustrations" : [
+        "frustration 1",
+        "frustration 2",
+        "frustration 3"
+      ],
+      "outcomes" : [
+        "outcome 1",
+        "outcome 2",
+        "outcome 3"
+      ]
+    },
+    {
+      "name": "Technical Support",
+      "bio": "Loves technical solutions for customer problems, has good relationships with the level ones, cares about solving problems.",
+      "image_source": "https://www.pngitem.com/pimgs/m/506-5067022_sweet-shap-profile-placeholder-hd-png-download.png",
+      "tech" : "70",
+      "business" : "50",
+      "customer" : "60",
+      "social" : "30",
+      "availability" : "50",
+      "url": "engineer",
+      "goals" : [
+        "goal 1",
+        "goal 2",
+        "goal 3"
+      ],
+      "frustrations" : [
+        "frustration 1",
+        "frustration 2",
+        "frustration 3"
+      ],
+      "outcomes" : [
+        "outcome 1",
+        "outcome 2",
+        "outcome 3"
+      ]
+    },
+    {
+      "name": "Senior Engineer",
+      "bio": "Has seen it all, has fought in hundreds of battles but cares about the precious uptime and admires clever technical solutions for buisness problems. Can be a little irratble when uncaffinated.",
+      "image_source": "https://www.pngitem.com/pimgs/m/506-5067022_sweet-shap-profile-placeholder-hd-png-download.png",
+      "tech" : "90",
+      "business" : "60",
+      "customer" : "25",
+      "social" : "40",
+      "availability" : "70",
+      "url": "senior",
+      "goals" : [
+        "goal 1",
+        "goal 2",
+        "goal 3"
+      ],
+      "frustrations" : [
+        "frustration 1",
+        "frustration 2",
+        "frustration 3"
+      ],
+      "outcomes" : [
+        "outcome 1",
+        "outcome 2",
+        "outcome 3"
+      ]
+    },
+    {
+      "name": "Manager",
+      "bio": "Wants to maintain the buisness reputation and maximize resource utilisation, interest on company goals and better ways to get there.",
+      "image_source": "https://www.pngitem.com/pimgs/m/506-5067022_sweet-shap-profile-placeholder-hd-png-download.png",
+      "tech" : "30",
+      "business" : "80",
+      "customer" : "40",
+      "social" : "70",
+      "availability" : "60",
+      "url": "manager",
+      "goals" : [
+        "goal 1",
+        "goal 2",
+        "goal 3"
+      ],
+      "frustrations" : [
+        "frustration 1",
+        "frustration 2",
+        "frustration 3"
+      ],
+      "outcomes" : [
+        "outcome 1",
+        "outcome 2",
+        "outcome 3"
+      ]
+    }
+]
+
+
+      
+      
+      
+      
+      

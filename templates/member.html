@@ -1,116 +1,63 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <!-- <div class="row">
-        <div class="col-md-5">
-            <img src="{{ member.image_source }}" alt="Profile image for {{ member.name }}">
-            <h2 class="col-md-7">{{ member.name }}</h2>
-        </div>
-    </div>
 
-    <div class="col-md-12">
-        <h3 class="history-heading uppercase">
-            Bio
-        </h3>
+<h2>{{ persona.name }}</h2>
+<div class="container-fluid">
+<img src="{{ persona.image_source }}" alt="Profile image for {{ persona.name }}" class="img-fluid">
+</div>
+<h3>Bio</h3>
+<p>{{ persona.bio }}</p>
+<h3>Motivations</h3>
 
-        <p>{{ member.description }}</p>
-    </div> -->
-    <div class="row">
-        <div class="col-md-4 bg-color-work-history section-column">
-            <div class="row">
-                <div class="col-12">
-                    <h3 class="history-heading uppercase">
-                        {{ member.name }}
-                    </h3>
-                </div>
-            </div>
-                <img src="{{ member.image_source }}" alt="Profile image for {{ member.name }}">
-                <h2 class="col-md-7">Bio</h2>
-                <p class="col-md-12">Short Paragraph about the person</p>
-        </div>
-        <div class="col-md-8 bg-color-three-reasons section-column">
-            <div class="row">
-                <div class="col">
-                    <h3 class="section-heading uppercase">Motivations</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-10 offset-1 offset-sm-0 col-sm-4 col-md-6">
-                    <div class="row">
-                        <div class="col-2">
-                            <i class="three-reasons-icon fa fa-tv" aria-hidden="true"></i>
-                        </div>
-                        <div class="col-10">
-                            <h4 class="three-reasons-heading uppercase">Goals</h4>
-                            <ul>
-                                <li>Item 1</li>
-                                <li>Item 2</li>
-                                <li>Item 3</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-10 offset-1 offset-sm-0 col-sm-4 col-md-6">
-                    <div class="row">
-                        <div class="col-2">
-                            <i class="three-reasons-icon fa fa-gears" aria-hidden="true"></i>
-                        </div>
-                        <div class="col-10">
-                            <h4 class="three-reasons-heading uppercase">Frustrations</h4>
-                            <ul>
-                                <li>Item 1</li>
-                                <li>Item 2</li>
-                                <li>Item 3</li>
-                            </ul>                             
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <h3 class="section-heading uppercase">Proficiencies</h3>
-                </div>
-            </div>
-            <div class="row progress-section">
-                <div class="col">
-                    Technical
-                    <div class="progress">
-                        <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%;">
-                            <span class="sr-only">90% complete</span>
-                        </div>
-                    </div>
-                    Business
-                    <div class="progress">
-                        <div class="progress-bar bg-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%;">
-                            <span class="sr-only">80% complete</span>
-                        </div>
-                    </div>
-                    Customer Focus
-                    <div class="progress">
-                        <div class="progress-bar bg-info" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%;">
-                            <span class="sr-only">70% complete</span>
-                        </div>
-                    </div>
-                    Social
-                    <div class="progress">
-                        <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%;">
-                            <span class="sr-only">80% complete</span>
-                        </div>
-                    </div>
-                    Uptime
-                    <div class="progress">
-                        <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%;">
-                            <span class="sr-only">80% complete</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <h3 class="section-heading uppercase">Desired Outcome</h3>
-                <p>Desired outcomes</p>
-            </div>
-        </div>
+<h4>Goals</h4>
+<ul>
+    {% for goal in persona.goals %}
+    <li>{{ goal }}</li>
+    {% endfor %}
+</ul>
+<h4>Frustrations</h4>
+<ul>
+    {% for frustration in persona.frustrations %}
+    <li>{{ frustration }}</li>
+    {% endfor %}
+</ul>                             
+<h3>Areas of Interest</h3>
+Technical Data
+<div class="progress">
+    <div class="progress-bar" role="progressbar" aria-valuenow="{{ persona.tech }}" aria-valuemin="0" aria-valuemax="100" style="width:{{ persona.tech }}%;">
+        <span class="sr-only">{{ persona.tech }}% complete</span>
     </div>
+</div>
+Business Impact
+<div class="progress">
+    <div class="progress-bar bg-success" role="progressbar" aria-valuenow="{{ persona.business }}" aria-valuemin="0" aria-valuemax="100" style="width:{{ persona.business }}%;">
+        <span class="sr-only">{{ persona.business }}% complete</span>
+    </div>
+</div>
+Customer Interaction
+<div class="progress">
+    <div class="progress-bar bg-info" role="progressbar" aria-valuenow="{{ persona.customer }}" aria-valuemin="0" aria-valuemax="100" style="width:{{ persona.customer }}%;">
+        <span class="sr-only">{{ persona.customer }}% complete</span>
+    </div>
+</div>
+Social Dynamic
+<div class="progress">
+    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="{{ persona.social }}" aria-valuemin="0" aria-valuemax="100" style="width:{{ persona.social }}%;">
+        <span class="sr-only">{{ persona.social }}% complete</span>
+    </div>
+</div>
+Service Availability
+<div class="progress">
+    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="{{ persona.availability }}" aria-valuemin="0" aria-valuemax="100" style="width:{{ persona.availability }}%;">
+        <span class="sr-only">{{ persona.availability }}% complete</span>
+    </div>
+</div>      
+      
+<h3>Desired Outcomes</h3>
+<ol>
+    {% for outcome in persona.outcomes %}
+    <li>{{ outcome }}</li>
+    {% endfor %}
+</ol> 
 {% endblock %}

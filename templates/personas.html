@@ -6,7 +6,7 @@
         I need some text here
     </p>
 
-    {% for persona in company %}
+    {% for persona in personas %}
 
         <div class="row featurette">
 
@@ -14,20 +14,20 @@
 
                 <div class="col-md-7">
                     <h3><a href="/persona/{{ persona.url }}">{{ loop.index }}. {{ persona.name }}</a></h3>
-                    <p>{{ persona.description }}</p>
+                    <p>{{ persona.bio }}</p>
                 </div>
                 <div class="col-md-5">
-                    <img src="{{ persona.image_source }}" alt="" class="featurette-image image-responsive">
+                    <img src="{{ persona.image_source }}" alt="Profile image for {{ persona.name }}" class="featurette-image image-responsive">
                 </div>
             
             {% else %}
 
                 <div class="col-md-5">
-                    <img src="{{ persona.image_source }}" alt="" class="featurette-image image-responsive">
+                    <img src="{{ persona.image_source }}" alt="Profile image for {{ persona.name }}" class="featurette-image image-responsive">
                 </div>
                 <div class="col-md-7">
                     <h3><a href="/persona/{{ persona.url }}">{{ loop.index }}. {{ persona.name }}</a></h3>
-                    <p>{{ persona.description }}</p>
+                    <p>{{ persona.bio }}</p>
                 </div>
 
             {% endif %}
